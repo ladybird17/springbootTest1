@@ -1,0 +1,28 @@
+plugins {
+	//스프링부트 버전
+	id 'org.springframework.boot' version '2.4.3'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	//사용언어
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+//사용언어의 버전
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+//라이브러리 의존성 설정
+dependencies {
+	//spring-web 사용
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//spring-devtools 사용
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
